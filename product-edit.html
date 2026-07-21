@@ -12,7 +12,69 @@
     <main class="d-flex">
       {{> nav}}
       <section class="content p-4 flex-grow-1">
-        <!-- build your page content here — refer to _data.md for data -->
+        <div class="pb-3 mb-4 border-bottom border-2">
+          <h2>Edit Product</h2>
+        </div>
+
+        <form class="d-flex flex-column w-75 gap-2" novalidate data-success="/products.html">
+          <div class="d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-25">
+              <label for="productNumber" class="form-label">Product Number</label>
+              <input id="productNumber" class="form-control" type="text" value="978-0-632-08712-9" required />
+              <div class="invalid-feedback">Product number is required</div>
+            </div>
+
+            <div class="mb-3 w-75">
+              <label for="productName" class="form-label">Product Name</label>
+              <input id="productName" class="form-control" type="text" value="Oriental Silk Keyboard" required />
+              <div class="invalid-feedback">Product name is required</div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-25">
+              <label for="price" class="form-label">Price</label>
+              <input id="price" class="form-control" type="number" step="0.01" value="41.09" required />
+              <div class="invalid-feedback">Price is required</div>
+            </div>
+
+            <div class="mb-3 w-25">
+              <label for="unit" class="form-label">Unit</label>
+              <input id="unit" class="form-control" type="text" value="Each" />
+            </div>
+
+            <div class="mb-3 w-50">
+              <label for="vendor" class="form-label">Vendor</label>
+              <select id="vendor" class="form-select" required>
+                <option value="">Select Vendor...</option>
+                <option value="1" selected>Kuhn, Swaniawski and Wolf</option>
+                <option value="2">Mayer and Sons</option>
+                <option value="3">Spencer, Gleichner and Muller</option>
+                <option value="4">Cruickshank, Borer and Hane</option>
+                <option value="5">Funk Group</option>
+                <option value="6">Schaefer Group</option>
+                <option value="7">Gislason Group</option>
+                <option value="8">Hegmann LLC</option>
+                <option value="9">Mills Group</option>
+                <option value="10">Mohr LLC</option>
+                <option value="11">Quitzon - Heathcote</option>
+                <option value="12">Hermann, Runte and Legros</option>
+              </select>
+              <div class="invalid-feedback">Vendor is required</div>
+            </div>
+          </div>
+          <div class="d-flex flex-row justify-content-end w-100 gap-4 mt-4">
+            <div class="d-flex justify-content-end">
+              <a href="/products.html" class="btn btn-outline-primary me-2">Cancel</a>
+              <button type="submit" class="btn btn-primary">
+                <svg class="bi pe-none me-2" width="16" height="16" fill="#FFFFFF">
+                  <use href="/assets/bootstrap-icons.svg#save" />
+                </svg>
+                Save product
+              </button>
+            </div>
+          </div>
+        </form>
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

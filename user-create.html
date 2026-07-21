@@ -15,40 +15,44 @@
         <div class="d-flex justify-content-between pb-3 mb-4 border-bottom border-2">
           <h2>New User</h2>
         </div>
-        <form class="d-flex flex-wrap w-50 gap-2">
-          <div class="d-flex flex-row gap-4">
-            <div class="mb-3 w-50">
+        <form class="d-flex flex-wrap w-50 gap-2" novalidate data-success="users.html">
+          <div class="d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-100">
               <label class="form-label" for="firstName">First Name</label>
-              <input id="firstName" class="form-control" type="text" placeholder="Enter first name" />
+              <input id="firstName" class="form-control" type="text" placeholder="Enter first name" required />
+              <div class="invalid-feedback">First Name is required</div>
             </div>
 
-            <div class="mb-3 w-50">
+            <div class="mb-3 w-100">
               <label class="form-label" for="lastName">Last Name</label>
-              <input id="lastName" class="form-control" type="text" placeholder="Enter last name" />
+              <input id="lastName" class="form-control" type="text" placeholder="Enter last name" required />
+              <div class="invalid-feedback">Last Name is required</div>
             </div>
           </div>
 
-          <div class="d-flex flex-row gap-4">
-            <div class="mb-3 w-50">
+          <div class="d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-100">
               <label class="form-label" for="email">Email</label>
               <input id="email" class="form-control" type="email" placeholder="Enter email address" />
             </div>
 
-            <div class="mb-3 w-50">
+            <div class="mb-3 w-100">
               <label class="form-label" for="phone">Phone</label>
               <input id="phone" class="form-control" type="text" placeholder="Enter phone number" />
             </div>
           </div>
 
-          <div class="d-flex flex-row gap-4">
-            <div class="mb-3 w-50">
+          <div class="d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-100">
               <label class="form-label" for="username">Username</label>
-              <input id="username" class="form-control" type="text" placeholder="Enter username" />
+              <input id="username" class="form-control" type="text" placeholder="Enter username" required />
+              <div class="invalid-feedback">Username is required</div>
             </div>
 
-            <div class="mb-3 w-50">
+            <div class="mb-3 w-100">
               <label class="form-label" for="password">Password</label>
-              <input id="password" class="form-control" type="password" placeholder="Enter password" />
+              <input id="password" class="form-control" type="password" placeholder="Enter password" required />
+              <div class="invalid-feedback">Password is required</div>
             </div>
           </div>
 
@@ -65,6 +69,7 @@
               </div>
             </div>
           </div>
+
           <div class="d-flex flex-row justify-content-end w-100 gap-4">
             <div class="d-flex justify-content-end mt-4">
               <a href="/staff.html" class="btn btn-outline-primary me-2">Cancel</a>
@@ -80,5 +85,6 @@
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/validation.js"></script>
   </body>
 </html>

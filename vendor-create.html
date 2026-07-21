@@ -15,31 +15,35 @@
         <div class="d-flex justify-content-between pb-3 mb-4 border-bottom border-2">
           <h2>New Vendor</h2>
         </div>
-        <form class="d-flex flex-column w-50 gap-3">
+        <form class="d-flex flex-column w-50 gap-3" novalidate data-success="/vendors.html">
           <div class="d-flex flex-row gap-4">
             <div class="w-25">
               <label class="form-label" for="vendorCode">Vendor Code</label>
-              <input id="vendorCode" class="form-control" type="text" placeholder="Enter short vendor code" />
+              <input id="vendorCode" class="form-control" type="text" placeholder="Enter short vendor code" required />
+              <div class="invalid-feedback">Vendor code is required</div>
             </div>
             <div class="w-75">
               <label class="form-label" for="vendorName">Vendor Name</label>
-              <input id="vendorName" class="form-control" type="text" placeholder="Enter vendor name" />
+              <input id="vendorName" class="form-control" type="text" placeholder="Enter vendor name" required />
+              <div class="invalid-feedback">Vendor name is required</div>
             </div>
           </div>
           <div class="d-flex flex-row gap-4">
             <div class="w-100">
               <label class="form-label" for="address">Address</label>
-              <input id="address" class="form-control" type="text" placeholder="Enter vendor's address" />
+              <input id="address" class="form-control" type="text" placeholder="Enter vendor's address" required />
+              <div class="invalid-feedback">Address is required</div>
             </div>
           </div>
           <div class="d-flex flex-row gap-4">
             <div class="w-50">
               <label class="form-label" for="city">City</label>
-              <input id="city" class="form-control" type="text" placeholder="Enter city" />
+              <input id="city" class="form-control" type="text" placeholder="Enter city" required />
+              <div class="invalid-feedback">City is required</div>
             </div>
             <div class="w-25">
-              <label for="status" class="form-label">Status</label>
-              <select id="state" class="form-select">
+              <label for="state" class="form-label">State</label>
+              <select id="state" class="form-select" required>
                 <option value="" selected>Select state...</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -92,10 +96,12 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
               </select>
+              <div class="invalid-feedback">State is required</div>
             </div>
             <div class="w-25">
               <label class="form-label" for="zip">ZIP</label>
-              <input id="zip" class="form-control" type="text" placeholder="Enter zip code" />
+              <input id="zip" class="form-control" type="text" placeholder="Enter zip code" required />
+              <div class="invalid-feedback">ZIP is required</div>
             </div>
           </div>
 
@@ -123,5 +129,6 @@
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/validation.js"></script>
   </body>
 </html>
