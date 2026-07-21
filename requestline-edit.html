@@ -12,7 +12,56 @@
     <main class="d-flex">
       {{> nav}}
       <section class="content p-4 flex-grow-1">
-        <!-- build your page content here — refer to _data.md for data -->
+        <div class="pb-3 mb-4 border-bottom border-2">
+          <h2>Edit Request Line</h2>
+        </div>
+        <form class="form w-50" novalidate data-success="/request-detail.html">
+          <div class="card p-4">
+            <h5 class="card-title mb-4"><strong>Item</strong></h5>
+
+            <div class="mb-3">
+              <label for="productId" class="form-label">Product</label>
+              <select id="productId" class="form-select" required>
+                <option value="" selected>Select...</option>
+                <option value="1">Oriental Silk Keyboard</option>
+                <option value="2">Electronic Steel Pants</option>
+                <option value="3">Luxurious Metal Gloves</option>
+                <option value="4">Frozen Ceramic Hat</option>
+                <option value="5">Refined Ceramic Chips</option>
+                <option value="6" selected>Elegant Steel Shirt</option>
+                <option value="7">Tasty Aluminum Tuna</option>
+                <option value="8">Modern Granite Soap</option>
+              </select>
+              <div class="invalid-feedback">Product is required</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <div id="price">$95.89</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="quantity" class="form-label">Quantity</label>
+              <input id="quantity" type="number" class="form-control" value="2" min="1" required />
+              <div class="invalid-feedback">Quantity must be at least 1</div>
+            </div>
+
+            <div class="mb-4">
+              <label for="amount" class="form-label">Amount</label>
+              <div id="amount">$191.78</div>
+            </div>
+
+            <div class="d-flex justify-content-end">
+              <a href="/request-detail.html" class="btn btn-outline-primary me-2">Cancel</a>
+              <button type="submit" class="btn btn-primary">
+                <svg class="bi pe-none me-2" width="16" height="16" fill="#FFFFFF">
+                  <use href="/assets/bootstrap-icons.svg#save" />
+                </svg>
+                Save line
+              </button>
+            </div>
+          </div>
+        </form>
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
