@@ -12,7 +12,77 @@
     <main class="d-flex">
       {{> nav}}
       <section class="content p-4 flex-grow-1">
-        <!-- build your page content here — refer to _data.md for data -->
+        <div class="pb-3 mb-4 border-bottom border-2">
+          <h2>Edit Request</h2>
+        </div>
+        <form class="d-flex flex-column w-75" novalidate data-success="/requests.html">
+          <div class="d-flex flex-row gap-4">
+            <div class="mb-3 w-50">
+              <label for="description" class="form-label">Description</label>
+              <input id="description" class="form-control" type="text" value="Conference room whiteboard" required />
+              <div class="invalid-feedback">Description is required</div>
+            </div>
+
+            <div class="mb-3 w-50">
+              <label for="deliveryMethod" class="form-label">Delivery Method</label>
+              <select id="deliveryMethod" class="form-select" required>
+                <option value="">Select...</option>
+                <option value="1" selected>Delivery</option>
+                <option value="2">Pickup</option>
+                <option value="3">Signature Delivery</option>
+              </select>
+              <div class="invalid-feedback">Delivery method is required</div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-row gap-4">
+            <div class="mb-3 w-50">
+              <label for="justification" class="form-label">Justification</label>
+              <input id="justification" class="form-control" type="text" value="Whiteboard cracked beyond use" required />
+              <div class="invalid-feedback">Justification is required</div>
+            </div>
+
+            <div class="mb-3 w-50">
+              <label for="status" class="form-label">Status</label>
+              <select id="status" class="form-select">
+                <option value="NEW">New</option>
+                <option value="REVIEW" selected>Review</option>
+                <option value="APPROVED">Approved</option>
+                <option value="REJECTED">Rejected</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="d-flex flex-row gap-4">
+            <div class="mb-3 w-50"></div>
+            <div class="mb-3 w-50">
+              <label for="requestedBy" class="form-label">Requested By</label>
+              <select id="requestedBy" class="form-select" disabled>
+                <option value="">Select user...</option>
+                <option value="1">Torrey Schoen</option>
+                <option value="2">Hope Hodkiewicz</option>
+                <option value="3">Alexandre Anderson</option>
+                <option value="4">Lyda Rolfson</option>
+                <option value="5">May Stracke</option>
+                <option value="6" selected>Melisa King-O'Kon</option>
+                <option value="7">Myrtis Ferry-Turcotte</option>
+                <option value="8">Randal Boyer</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row-3 d-flex flex-row justify-content-end w-100 gap-4">
+            <div class="d-flex justify-content-end mt-4">
+              <a href="/requests.html" class="btn btn-outline-primary me-2">Cancel</a>
+              <button type="submit" class="btn btn-primary">
+                <svg class="bi pe-none me-2" width="16" height="16" fill="#FFFFFF">
+                  <use href="/assets/bootstrap-icons.svg#save" />
+                </svg>
+                Save request
+              </button>
+            </div>
+          </div>
+        </form>
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

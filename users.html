@@ -12,35 +12,25 @@
     <main class="d-flex">
       {{> nav}}
       <section class="content p-4 flex-grow-1">
-        <div class="d-flex justify-content-between pb-3 mb-4 border-bottom border-2">
-          <h2>Users</h2>
-          <a href="/user-create.html">
-            <button type="button" class="btn btn-primary">
-              <svg class="bi pe-none me-2" width="32" height="32" fill="#FFFFFF">
-                <use href="/assets/bootstrap-icons.svg#plus" />
-              </svg>
-              Create A User
-            </button>
+        <div class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom border-2">
+          <h2 class="fw-light mb-0">Users</h2>
+          <a href="/user-create.html" class="btn btn-primary">
+            <svg class="bi pe-none me-2" width="32" height="32" fill="#FFFFFF">
+              <use href="/assets/bootstrap-icons.svg#plus" />
+            </svg>
+            Create a user
           </a>
         </div>
-        <section class="list d-flex flex-row flex-wrap bg-light gap-5 p-4 rounded-4">
-          <!-- Card 1: Torrey -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5 fs-5" style="width: 58px; height: 58px; font-family: Consolas">TS</div>
-                  <div>
-                    <div class="fw-bold">Torrey Schoen</div>
-                    <div class="text-muted">(303) 965-3180</div>
-                  </div>
-                </div>
+
+        <section class="list d-flex flex-row flex-wrap bg-light gap-5 p-5 rounded-4">
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">TS</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">Torrey Schoen</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -48,27 +38,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">no role assigned</div>
+              <div class="text-secondary small">(303) 965-3180</div>
             </div>
           </div>
 
-          <!-- Card 2: Hope -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5" style="width: 58px; height: 58px; font-family: Consolas">HH</div>
-                  <div>
-                    <div class="fw-bold">Hope Hodkiewicz</div>
-                    <div class="text-muted">Admin</div>
-                    <div class="text-muted">(527) 753-9263</div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">HH</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">Hope Hodkiewicz</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -76,27 +58,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">Admin</div>
+              <div class="text-secondary small">(527) 753-9263</div>
             </div>
           </div>
 
-          <!-- Card 3: Alexandre -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5" style="width: 58px; height: 58px; font-family: Consolas">AA</div>
-                  <div>
-                    <div class="fw-bold">Alexandre Anderson</div>
-                    <div class="text-muted">Admin</div>
-                    <div class="text-muted">(456) 604-5257</div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">AA</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">Alexandre Anderson</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -104,27 +78,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">Admin</div>
+              <div class="text-secondary small">(456) 604-5257</div>
             </div>
           </div>
 
-          <!-- Card 4: Lyda -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5" style="width: 58px; height: 58px; font-family: Consolas">LR</div>
-                  <div>
-                    <div class="fw-bold">Lyda Rolfson</div>
-                    <div class="text-muted">Reviewer</div>
-                    <div class="text-muted">(480) 790-4682</div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">LR</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">Lyda Rolfson</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -132,27 +98,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">Reviewer</div>
+              <div class="text-secondary small">(480) 790-4682</div>
             </div>
           </div>
 
-          <!-- Card 5: May -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5" style="width: 58px; height: 58px; font-family: Consolas">MS</div>
-                  <div>
-                    <div class="fw-bold">May Stracke</div>
-                    <div class="text-muted">Admin</div>
-                    <div class="text-muted">(607) 217-1612</div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">MS</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">May Stracke</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -160,27 +118,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">Admin</div>
+              <div class="text-secondary small">(607) 217-1612</div>
             </div>
           </div>
 
-          <!-- Card 6: Melisa -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5" style="width: 58px; height: 58px; font-family: Consolas">MK</div>
-                  <div>
-                    <div class="fw-bold">Melisa King-O'Kon</div>
-                    <div class="text-muted">Reviewer</div>
-                    <div class="text-muted">(561) 881-7435</div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">MK</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">Melisa King-O'Kon</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -188,26 +138,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">Reviewer</div>
+              <div class="text-secondary small">(561) 881-7435</div>
             </div>
           </div>
 
-          <!-- Card 7: Myrtis -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5" style="width: 58px; height: 58px; font-family: Consolas">MF</div>
-                  <div>
-                    <div class="fw-bold">Myrtis Ferry-Turcotte</div>
-                    <div class="text-muted">(367) 534-3017</div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">MF</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">Myrtis Ferry-Turcotte</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -215,27 +158,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">no role assigned</div>
+              <div class="text-secondary small">(367) 534-3017</div>
             </div>
           </div>
 
-          <!-- Card 8: Randal -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5" style="width: 58px; height: 58px; font-family: Consolas">AA</div>
-                  <div>
-                    <div class="fw-bold">Randal Boyer</div>
-                    <div class="text-muted">Reviewer</div>
-                    <div class="text-muted">(171) 633-1775</div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">RB</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">Randal Boyer</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -243,27 +178,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">Reviewer</div>
+              <div class="text-secondary small">(171) 633-1775</div>
             </div>
           </div>
 
-          <!-- Card 9: Haskell -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5" style="width: 58px; height: 58px; font-family: Consolas">HO</div>
-                  <div>
-                    <div class="fw-bold">Haskell Ondricka</div>
-                    <div class="text-muted">Reviewer</div>
-                    <div class="text-muted">(589) 352-9595</div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">HO</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">Haskell Ondricka</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -271,27 +198,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">Reviewer</div>
+              <div class="text-secondary small">(589) 352-9595</div>
             </div>
           </div>
 
-          <!-- Card 10: Jayme -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5" style="width: 58px; height: 58px; font-family: Consolas">JO</div>
-                  <div>
-                    <div class="fw-bold">Jayme O'Kon</div>
-                    <div class="text-muted">Admin</div>
-                    <div class="text-muted">(407) 625-8764</div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">JO</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">Jayme O'Kon</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -299,27 +218,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">Admin</div>
+              <div class="text-secondary small">(407) 625-8764</div>
             </div>
           </div>
 
-          <!-- Card 11: Bernadine -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5" style="width: 58px; height: 58px; font-family: Consolas">BS</div>
-                  <div>
-                    <div class="fw-bold">Bernadine Schamberger</div>
-                    <div class="text-muted">Admin</div>
-                    <div class="text-muted">(843) 274-3703</div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">BS</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">Bernadine Schamberger</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -327,27 +238,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">Admin</div>
+              <div class="text-secondary small">(843) 274-3703</div>
             </div>
           </div>
 
-          <!-- Card 12: Santino -->
-          <div class="card" style="width: 19rem">
-            <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 30%"></div></div>
-            <div class="py-4 px-4">
-              <div class="d-flex justify-content-between align-items-start">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="bg-secondary text-white rounded-circle p-3 fs-5" style="width: 58px; height: 58px; font-family: Consolas">SS</div>
-                  <div>
-                    <div class="fw-bold">Santino Satterfield</div>
-                    <div class="text-muted">Reviewer</div>
-                    <div class="text-muted">(357) 531-7170</div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-center gap-4" style="width: 19rem">
+            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fs-3" style="width: 80px; height: 80px; font-family: Consolas">SS</div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center gap-2">
+                <div class="fw-bold">Santino Satterfield</div>
                 <div class="dropdown">
-                  <button class="btn btn-light p-1 border-0" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF">
-                      <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
+                  <button class="btn btn-link p-0 border-0 text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi pe-none" width="20" height="20" fill="#007AFF"><use href="/assets/bootstrap-icons.svg#three-dots-vertical" /></svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/user-edit.html">Edit</a></li>
@@ -355,10 +258,13 @@
                   </ul>
                 </div>
               </div>
+              <div class="text-secondary small mt-1">Reviewer</div>
+              <div class="text-secondary small">(357) 531-7170</div>
             </div>
           </div>
         </section>
       </section>
+
       <div class="modal fade" id="deleteUserModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
